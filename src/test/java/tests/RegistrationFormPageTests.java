@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
@@ -27,6 +29,11 @@ public class RegistrationFormPageTests extends TestBase {
 
 
     @Test
+    @Owner("golub")
+    @Severity(SeverityLevel.NORMAL)
+    @Feature("проверка формы через Jenkins")
+    @DisplayName("Проверка заполенения формы")
+    @Link(value = "Test", url = "https://github.com/")
     void successFillTest() {
         // Act
         registrationPage
