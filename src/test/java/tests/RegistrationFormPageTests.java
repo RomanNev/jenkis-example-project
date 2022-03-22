@@ -39,7 +39,7 @@ public class RegistrationFormPageTests extends TestBase {
                 .setBirthDate(calendarMonth, calendarYear)
                 .setSubjectsInput(subjectsText)
                 .setHobby(hobbiesText)
-                .selectUploadPicture(fileName)
+                //.selectUploadPicture(fileName)
                 .setCurrentAddressInput(currentAddress)
                 .selectStateAndCity(stateName, cityName)
                 .submitForm();
