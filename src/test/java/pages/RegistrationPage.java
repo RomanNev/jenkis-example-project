@@ -14,29 +14,28 @@ public class RegistrationPage {
     // locators
     SelenideElement
             firstNameInput = $("#firstName"),
-            lastNameInput =  $("#lastName"),
+            lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
-            userNumberInput =  $("#userNumber"),
+            userNumberInput = $("#userNumber"),
             subjectsTextInput = $("#subjectsInput"),
             uploadPictureInput = $("#uploadPicture"),
             currentAddressInput = $("#currentAddress"),
-            stateSelect =  $("#react-select-3-input"),
-            stateSelectSet =   $("#react-select-3-option-0"),
-            citySelect =   $("#react-select-4-input"),
+            stateSelect = $("#react-select-3-input"),
+            stateSelectSet = $("#react-select-3-option-0"),
+            citySelect = $("#react-select-4-input"),
             citySelectSet = $("#react-select-4-option-0"),
             submitForm = $("#submit"),
-            resultTable =  $(".table-responsive");
-
+            resultTable = $(".table-responsive");
 
 
     //actions
 
-    public RegistrationPage submitForm(){
+    public RegistrationPage submitForm() {
         submitForm.click();
         return this;
     }
 
-    public RegistrationPage selectStateAndCity(String stateName, String cityName){
+    public RegistrationPage selectStateAndCity(String stateName, String cityName) {
         stateSelect.setValue(stateName);
         stateSelectSet.click();
         citySelect.setValue(cityName);
@@ -44,68 +43,68 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setCurrentAddressInput(String currentAddress){
+    public RegistrationPage setCurrentAddressInput(String currentAddress) {
         currentAddressInput.setValue(currentAddress);
         return this;
     }
 
-    public RegistrationPage selectUploadPicture(String fileName){
+    public RegistrationPage selectUploadPicture(String fileName) {
         uploadPictureInput.uploadFromClasspath("jpg/" + fileName);
         return this;
     }
 
-    public RegistrationPage selectGender(String gender){
+    public RegistrationPage selectGender(String gender) {
         $(byText(gender)).click();
         return this;
     }
 
-    public RegistrationPage setHobby(String hobbies){
+    public RegistrationPage setHobby(String hobbies) {
         $(byText(hobbies)).click();
         return this;
     }
 
 
-    public RegistrationPage setSubjectsInput(String subjects){
+    public RegistrationPage setSubjectsInput(String subjects) {
         subjectsTextInput.setValue(subjects).pressEnter();
         return this;
     }
 
-    public RegistrationPage setUserEmailInput(String userEmail){
+    public RegistrationPage setUserEmailInput(String userEmail) {
         userEmailInput.setValue(userEmail);
         return this;
     }
 
-    public RegistrationPage setUserNumberInput(String userNumberInput){
+    public RegistrationPage setUserNumberInput(String userNumberInput) {
         this.userNumberInput.setValue(userNumberInput);
         return this;
     }
 
-   public RegistrationPage openPage(){
-       open("/automation-practice-form");
-       return this;
-   }
+    public RegistrationPage openPage() {
+        open("/automation-practice-form");
+        return this;
+    }
 
-   public RegistrationPage setFirstNameInput(String firstName) {
-       firstNameInput.setValue(firstName);
-       return this;
-   }
+    public RegistrationPage setFirstNameInput(String firstName) {
+        firstNameInput.setValue(firstName);
+        return this;
+    }
 
-   public RegistrationPage setLastNameInput(String lastName) {
-       lastNameInput.setValue(lastName);
-       return this;
-   }
+    public RegistrationPage setLastNameInput(String lastName) {
+        lastNameInput.setValue(lastName);
+        return this;
+    }
 
-   public RegistrationPage setBirthDate(String month, String year){
-       $("#dateOfBirthInput").click();
-       calendarComponent.setDate(month,year);
-       return this;
+    public RegistrationPage setBirthDate(String month, String year) {
+        $("#dateOfBirthInput").click();
+        calendarComponent.setDate(month, year);
+        return this;
 
-   }
+    }
 
-   public RegistrationPage checkForm(String checkData){
-       resultTable.shouldHave(text(checkData));
-       return this;
+    public RegistrationPage checkForm(String checkData) {
+        resultTable.shouldHave(text(checkData));
+        return this;
 
-   }
+    }
 
 }
