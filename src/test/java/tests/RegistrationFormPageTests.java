@@ -1,16 +1,14 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
-public class RegistrationFormPageTests {
+public class RegistrationFormPageTests extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
     //configuration variables
-    String firstName = "Volodya";
+    String firstName = "Roman";
     String lastName = "Golub";
     String userEmail = "Golub@mail.guli";
     String userNumber = "7111222334";
