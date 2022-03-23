@@ -21,18 +21,13 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.remote = "https://" + login + ":" + password + "@" + System.getProperty("remoteBrowser");
 
-
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-
-        Configuration.remote = "https://" + login + ":" + password + "@" + System.getProperty("remoteBrowser");
-
 
     }
 
