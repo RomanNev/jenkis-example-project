@@ -31,6 +31,8 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
 
+        Configuration.remote = "https://" + login + ":" + password + "@" + System.getProperty("remoteBrowser");
+
 
     }
 
